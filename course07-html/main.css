@@ -1,0 +1,17 @@
+body{
+    background-color: #eee;
+}
+
+.caja{
+    margin: 8px; /* Bordea el contenido por fuera */
+    padding: 8px; /*Bordea el contenido por dentro */
+    border-style: solid; /* Estilo del borde */
+    border-width: 8px; /* Ancho del borde */
+    border-color: #faa; /* Color del borde */
+    border-left: 6px solid #afa; /* Borde izquierdo */
+    background-color: #aaf; /* Color de fondo */
+    height: 100px; /* Alto de la caja */
+    width: 100px; /* Ancho de la caja */
+    color: #575; /* Color del texto */
+    border-radius: 8px; /* Simula un circulo en el borde */
+}

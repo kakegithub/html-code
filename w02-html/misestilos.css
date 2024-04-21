@@ -1,0 +1,62 @@
+/* #texto1 {font-size: 20px;} */
+/* texto1 {font-size: 40px;} */
+/* p.texto {font-size: 40px;} */
+
+/* p[name="texto2"] {font-size: 60;} */
+
+/* p:nth-child(2){
+    background: #999999;
+} */
+
+/* .texto1:nth-child(1){
+    background: #333333;
+}
+
+.texto2:nth-child(2){
+    background: #999999;
+}
+
+.texto3:nth-child(3){
+    background: #333333;
+}
+
+.texto4:nth-child(4){
+    background: #999999;
+} */
+
+* {
+    margin: 0px;
+    font-size: 40px;
+}
+
+p:nth-child(odd){
+    background: #9e178c;
+}
+p:nth-child(even){
+    background: #390f9b;
+}
+
+p.texto{
+    background: #700707;
+}
+
+p:last-child{
+    background: #87654F;
+}
+
+/*:not(p){
+    margin: 0px;
+}*/
+
+/*:not(.mitexto){
+    margin: 0px;
+}*/
+
+div > p.texto2{
+    color: aqua;
+}
+
+p.texto2 + p{
+    color:chartreuse;
+}
+

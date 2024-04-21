@@ -1,0 +1,36 @@
+body{
+    background-color: aliceblue;
+}
+
+p{
+    max-width: 350px; /* Ancho del elemento */
+    /*background-color: #f00;*/
+    /*margin: auto; Para centrar el elemnto */
+    position: relative; /* posiciona el elemento en la pagina. Tambien tenemos relative, static,.. */
+    /* fixed mantiene el elemento fijo aunque hagamos scroll. */
+    left: 15px; /*Muevo el elemento 15px puedo utilizar left right top bottom asi como darle valores negativos*/
+    top:0px;
+    bottom: 0px;
+
+}
+
+#over{
+    width: 100px;
+    height: 100px;
+    overflow: visible; /* Mete todo el contenido en la caja de 100 * 100*. Puede tener los valores de hidden
+     que oculta el contenido que no cabe y scroll nos pone las barritas y auto que nos pone las barritas si los
+     necesita*/
+     /* overflow-x: scroll; fuerza la barra en horizontal*/
+     /* overflow-y: scroll; fuerza la barra en vertical*/
+     float: ; /* Especifica si queremos que un elemento flote a la izquierda o derecha */
+}
+img{
+    float: right; /* Todas las imagenes tienen que flotar a la derecha */
+    /* opacity: 0.5; recibe un valor de 0 a 1. Espara dar trasparencia */
+}
+img:hover{
+    opacity: 0.5;
+}
+div p{
+    color:red;
+}

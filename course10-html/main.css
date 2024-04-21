@@ -1,0 +1,17 @@
+body{
+    background-color: #eee;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace; /* Cambia la fuente del texto */
+    font-weight: bold; /* Ancho de la letra */ /* Tamaños van de 100 en 100 */ /*font-weight: 300;*/
+    font-style: italic; /* Estilo de la fuente */
+    /*font-size:  20px; tamaño de la fuente */
+    font-size: 1.5em;
+    color: #222fff; /* Color del texto */
+    text-align: justify; /* Alinea el texto */
+    text-indent: 15px; /* Desplaza la primera linea hacia la derecha */
+    line-height: 1.7; /* Manipula el espacio de las lineas del texto*/ /* altura */ 
+    word-spacing: 10px; /* Genera un espacio entre palabras */
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5); /* aplica un efecto de sombra */
+}

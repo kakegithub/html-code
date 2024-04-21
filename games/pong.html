@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #game-canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body onload="startGame()">
+    <canvas id="game-canvas" width="500" height="500"></canvas>
+    <script>
+      // Get canvas and setup context
+      var canvas = document.getElementById("game-canvas");
+      var ctx = canvas.getContext("2d");
+
+      // Ball object
+      var ball = {
+        x: canvas.width / 2,
+        y: canvas.height / 2,
+        radius: 10,
+        speedX: 5,
+        speedY: 5,
+        draw: function() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+          ctx.fillStyle = "red";
+          ctx.fill();
+        }
+      };
+
+      // Paddle objects
+      var paddleWidth = 10;
+      var paddleHeight = 75;
+      var paddleSpeed = 5;
+      var leftPaddle = {
+        x: 0,
+        y: canvas.height / 2 - paddleHeight / 2,
+        draw: function() {
+          ctx.fillStyle = "blue";
+          ctx.fillRect(this.x, this.y, paddleWidth, paddleHeight);
+        }
+      };
+      var rightPaddle = {
+        x: canvas.width - paddleWidth,
+        y: canvas.height / 2 - paddleHeight / 2,
+        draw: function() {
+          ctx.fillStyle = "blue";
+          ctx.fillRect(this.x, this.y, paddleWidth, paddleHeight);
+        }
+      };
+
+      // Control left paddle movement
+      document.onkeydown = function(event) {
+        if (event.keyCode === 87) {
+          // Move up
+          leftPaddle.y -= paddleSpeed;
+        } else if (event.keyCode === 83) {
+          // Move down
+          leftPaddle.y += paddleSpeed;
+        }
+      };
+
+      // Control right paddle movement (AI)
+      function controlRightPaddle() {
+        if (ball.y < rightPaddle.y + paddleHeight / 2) {
+          rightPaddle.y -= paddleSpeed;
+        } else if (ball.y > rightPaddle.y + paddleHeight / 2) {
+          rightPaddle.y += paddleSpeed;
+        }
+      }
+
+      // Check for ball collision with paddles or walls
+      function checkCollision() {
+        // Check for collision with left paddle
+        if (ball.x - ball.radius <= leftPaddle.x + paddleWidth &&
+            ball.y >= leftPaddle.y &&
+            ball.y <= leftPaddle.y + paddleHeight) {
+          ball.speedX = -ball.speedX;
+        }
+
+        // Check for collision with right paddle
+        if (ball.x + ball.radius >= rightPaddle.x &&
+            ball.y >= rightPaddle.y &&
+            ball.y <= rightPaddle.y + paddleHeight) {
+          ball.speedX = -ball.speedX;
+        }
+
+         // Check for collision with top and bottom walls
+         if (ball.y - ball.radius <= 0 || ball.y + ball.radius >= canvas.height) {
+          ball.speedY = -ball.speedY;
+        }
+      }
+
+      // Game loop
+      function gameLoop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ball.x += ball.speedX;
+        ball.y += ball.speedY;
+
+        ball.draw();
+        leftPaddle.draw();
+        rightPaddle.draw();
+
+        controlRightPaddle();
+        checkCollision();
+
+        requestAnimationFrame(gameLoop);
+      }
+
+      function startGame() {
+        gameLoop();
+      }
+    </script>
+  </body>
+</html>

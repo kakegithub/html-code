@@ -1,0 +1,70 @@
+
+body{
+    text-align: center;
+}
+
+#principal{
+    display: block;
+    width: 500px;
+    margin: 50px auto;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #999999;
+    background: #dddddd;
+
+    /* border-radius: genera esquinas redondeadas */
+    border-radius: 20px;
+
+    /* box-shadow: Crea sombras para la caja */
+    box-shadow: rgb(150,150,150) 5px 5px 10px inset;
+    
+    /* linear-gradient: se aplica a background o backgroud-image para proporcionar un gradiente lineal */
+    background: linear-gradient(top, #ffffff, #006699);
+
+    /* border: Crea un borde */
+    border: 29px;
+    /* border-image: Crea un borde con una imagen personalizada */
+    border-image: url("./img/cartapoker.png") 29 stretch;
+
+    /* transform: modifica la forma de un elemento */
+    transform: scale(2);
+    transform: scale(1,-1);
+    
+    /*rotate: (30deg);*/
+    /*-webkit-transform: rotate(30deg);*/
+
+    /*-moz-transform: skew(20deg);*/
+    /*-webkit-transform: skew(20deg);*/
+
+    /*-webkit-transform: translate(100px);*/
+
+    /* transition: crea una transicion entre dos estados de un elemento */
+    -webkit-transition: -webkit-transform 1s ease-in-out 0.5s;
+    
+}
+
+/*#principal:hover{
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+}*/
+
+#titulo{
+    font: bold;
+    font-size: 36px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*text-shadow: rgb(0,0,150) 3px 3px 5px;*/
+    /* text-shadow: Crea sombras para el texto */ /*rgba es una mejora de rgb */
+    text-shadow: rgba(0,0,0,0.5) 3px 3px 5px;
+    /* hsla es una mejora de hsl */
+    color: hsla(226, 100%, 50%, 0.5)
+    /* outline y outline-offset combinadas generan un segundo borde alejado del borde original del elemento */
+    outline 2px dashed #000099; 
+    outline-offset: 15px;
+    
+}
+
+/* Para añadir una fuente que no tenemos */
+@font-face {
+    font-family: 'MiNuevaFuente';
+    src: url('font.ttf');
+}

@@ -1,0 +1,51 @@
+body{
+    background-color: white;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    font-weight: 600; /* Ancho de la fuente va de 100 a 900*/
+    font-size: 1.5 em; /* tamaño de la fuente. Se puede utilizar px en vez de em*/
+    color: #666fff;
+    text-align: justify;
+    text-indent: 40px; /* Indenta la primera linea del texto */
+    line-height: 1.7; /* Separa las lineas de texto por altura */
+    word-spacing: 10px; /* Agraga un espacio entre cada una de las palabras */
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.3); /* añade sombra al texto */
+
+}
+a{
+    color: hotpink;
+    border: solid 3px black;
+    text-decoration: none; /* añade decoracion al texto */
+    text-transform: uppercase;
+    letter-spacing: normal; /* especifica el espacio entre caracteres */
+    background-color: aquamarine; /* color de fondo */
+    padding: 15px;
+    margin: 15px;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+
+/* Cuando el link no ha sido visitado */
+a:link{
+    color: pink;
+    text-decoration: none;;
+}
+
+/* Cuando el link ha sido visitado */
+a:visited{
+    color: blue;
+}
+
+/* Cuando el link es activado por el usuario */
+a:active{
+    color: red;
+}
+
+/* Cuando pasamos el raton por encima del link */
+a:hover{
+    color:black;
+    text-decoration: underline;
+    background-color: aqua;
+}

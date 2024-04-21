@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios web</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="codigo.js"></script>
+</head>
+
+<body>
+ 
+    <section>
+        <form name="miformulario" id="miformulario" method="GET">
+            
+            <label>nombre</label>
+            <input type="text" name="miformulario" id="nombre">
+            
+            <label>email</label>
+            <input type="email" name="miemail" id="email" required multiple>
+            
+            <label>busqueda</label>
+            <input type="search" name="busqueda" id="busqueda" placeholder="Escriba su busqueda" autofocus>
+            
+            <label>url</label>
+            <input type="url" name="miurl" id="miurl">
+            
+            <label>telefono</label>
+            <input type="tel" name="telefono" id="telefono">
+            
+            <label>numero</label>
+            <input type="number" name="numero" id="numero" min="0" max="10" step="5">
+            
+            <label>rango</label>
+            <input type="range" name="numero" id="numero" min="0" max="10" step="5">
+            
+            <label>fecha</label>
+            <input type="date" name="fecha" id="fecha">
+            
+            <label>semana</label>
+            <input type="week" name="semana" id="semana">
+            
+            <label>mes</label>
+            <input type="month" name="mes" id="mes">
+            
+            <label>hora</label>
+            <input type="time" name="hora" id="hora">
+            
+            <label>fechahora</label>
+            <input type="datetime" name="fechahora" id="fechahora">
+            
+            <label>tiempolocal</label>
+            <input type="datetime-local" name="tiempolocal" id="tiempolocal">
+            
+            <label>color</label>
+            <input type="color" name="micolor" id="micolor">
+            
+            <label>codigo postal</label>
+            <input pattern="[0-9]{5}" name="codigopostal" id="codigopostal" title="Inserte los 5 numeros de su codigo postal">
+
+            <input type="submit" value="enviar">
+        
+        </form>
+    </section>
+
+</body>
+
+</html>

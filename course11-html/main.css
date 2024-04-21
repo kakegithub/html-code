@@ -1,0 +1,36 @@
+body{
+    background-color: #eee;
+}
+
+a{
+    color: hotpink;
+    background-color:#f00;
+    border: solid 3px #c00;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 4px;
+}
+
+/* Estilo antes de visitar link */
+a:link {
+    color: pink;
+    text-decoration: none;
+}
+
+/* Estilo despues de visitar link */
+a:visited{
+    color:white;
+}
+
+/* Estilo cuando hacemos click en el link */
+a:active{
+    color:black;
+}
+
+/* Estilo cuando pasamos el mouse por encima del link */
+a:hover{
+    color:blue;
+    text-decoration: underline;
+    background-color:#f55;
+}
+}

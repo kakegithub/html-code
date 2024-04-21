@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera web</title>
+	<style>
+		table, th, td{
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<table style="width: 500px;">
+		<thead>
+			<tr>
+				<th>Producto</th>
+				<th>Precio</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Hola Beats</td>
+				<td>Gratis</td>
+			</tr>
+			<tr>
+				<td>Chanchito feliz</td>
+				<td>19.90$</td>
+			</tr>
+			<tr>
+				<td>Chanchito feliz muy feliz</td>
+				<td>29.90$</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<td></td>
+			<td>49.80$</td>
+		</tfoot>
+	</table>
+
+
+
+	<!-- lista no ordenada-->
+	<ul>
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+		<li>Elemento 4</li>
+	</ul>
+
+	<!-- lista ordenada-->
+	<ol>
+		<li value="50">Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+		<li>Elemento 4</li>
+		<li>
+			<ol>
+				<li style="list-style-type:lower-roman;" >Sub Elemento 1</li>
+				<li style="list-style-type:lower-roman;">Sub Elemento 2</li>
+				<li style="list-style-type:lower-roman;">Sub Elemento 3</li>
+				<li style="list-style-type:lower-roman;">Sub Elemento 4</li>
+			</ol>
+		</li>
+	</ol>
+
+
+
+
+
+
+	<form action="/formulario" method="POST">
+		<label for="nombre">Nombre</label>
+		<input value="valor por defecto" type="text" id="nombre" name="nombre" placeholder="Escriba su nombre en el campo" />	
+		<br>
+		<label for="apellido">Apellido</label>
+		<input value="valor por defecto" type="text" id="apellido" name="apellido" placeholder="Escriba su apellido en el campo" />
+		<br>
+		<textarea cols="50"  rows="10" id="comentario" placeholder="Ingrese comentario" name="comentario">Este es un valor por defecto</textarea>
+		<button type="button">Tipo boton</button>
+		<button type="reset">Tipo reset</button>
+		<button type="submit">Tipo submit</button>
+	</form>
+    <h1>Mi primer heading</h1>
+    <h2>Mi segundo heading</h2>
+    <h3>Mi tercer heading</h3>
+    <h4>Mi cuarto heading</h4>
+    <h5>Mi quinto heading</h5>
+    <h6>Mi sexto heading</h6>
+    <p>Chanchito feliz esta muy feliz</p>
+    <p>Chanchito triste esta muy triste</p>
+    <hr>
+    <h2>Vuelve Chanchito</h2>
+    <p>Este texto es <span style="color: blue;"> poco mas largo </span> 
+		y es para mostrar<br>
+        la etiqueta de spam!
+    </p>
+    <!-- Este texto es un comentario y no va a 
+    aparecer en el navegador-->
+	<a target="_blank" href="https://www.google.es">Ir a Google</a>
+	<br>
+	<img src="img/coffee.png" width="400"/>
+	
+</body>
+</html>

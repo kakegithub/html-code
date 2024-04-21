@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS API VIDEO</title>
+    <style>
+        .cajas{
+            display:inline-block;
+            margin: 10px;
+            padding: 5px;
+            border: 1px solid #999999;
+        }
+    </style>
+    <script src="canvasvideo.js"></script>
+</head>
+<body>
+    <section class="cajas">
+        <video id="medio" width="483" height="272">
+            <source src="./video/1.mp4">
+        </video>
+    </section>
+
+    <section class="cajas">
+        <canvas id="lienzo" width="483" height="272">
+            Su navegador no soporta el elemento canvas
+        </canvas>
+    </section>
+   
+</body>
+</html>

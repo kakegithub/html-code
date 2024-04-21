@@ -1,0 +1,14 @@
+body{
+    background-color: #efefef;
+     /*color: #ff0000;*/
+} 
+
+/* Elemento por id */
+#parrafo{
+    color:red;
+}
+
+/* Elemento por clase */
+.etiqueta{
+    color:green;
+}

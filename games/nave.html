@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #game-canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game-canvas" width="500" height="500"></canvas>
+    <script>
+      // Get canvas and setup context
+      var canvas = document.getElementById("game-canvas");
+      var ctx = canvas.getContext("2d");
+
+      // Ship object
+      var ship = {
+        x: canvas.width / 2,
+        y: canvas.height - 30,
+        width: 30,
+        height: 30,
+        speed: 3,
+        draw: function() {
+          ctx.fillStyle = "blue";
+          ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+      };
+
+      // Control ship movement
+      document.onkeydown = function(event) {
+        if (event.keyCode === 37) {
+          // Move left
+          ship.x -= ship.speed;
+        } else if (event.keyCode === 39) {
+          // Move right
+          ship.x += ship.speed;
+        }
+      };
+
+      // Game loop
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ship.draw();
+        requestAnimationFrame(draw);
+      }
+      draw();
+    </script>
+  </body>
+</html>
