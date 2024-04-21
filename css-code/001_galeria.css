@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+#titulo {
+  text-align: center;
+  font-size: 40px;
+
+  background-color: coral;
+  background: linear-gradient(top, blue, rgb(124, 210, 212));
+  background: -webkit-linear-gradient(top, blue, rgb(124, 210, 212));
+  background: -moz-linear-gradient(top, blue, rgb(124, 210, 212));
+  background: -ms-linear-gradient(top, blue, rgb(124, 210, 212));
+  background: -o-linear-gradient(top, blue, rgb(124, 210, 212));
+
+  width: 50%;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -webkit-border-radius: 30px;
+
+  margin: 40px auto;
+  padding: 15px;
+  color: white;
+  box-shadow: grey50px 50px 15px;
+  text-shadow: black 2px 2px 2px;
+}
+
+.imagen {
+  width: 200px;
+  height: 130px;
+  border: 2px solid black;
+  padding: 4px;
+  float: left;
+  margin: 80px 20px;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out 1s;
+}
+#imagen1 {
+  margin-left: 100px;
+}
+
+.imagen:hover {
+  transform: scale(1.2);
+}
+p.blue {
+  color: blue;
+  margin-right: 20px;
+}
